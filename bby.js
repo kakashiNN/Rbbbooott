@@ -11,7 +11,7 @@ let knowledge = JSON.parse(fs.readFileSync(KNOWLEDGE_FILE));
 function botReply(message) {
     const msg = message.toLowerCase();
     if (knowledge[msg]) return knowledge[msg];
-    return "Ami ekhono eta jani na! teach: prosno = uttor diye amake sekhao 😊";
+    return "আমাকে এটা শিক্ষানো হয় নাই। পিলিজ আমাকে এটা শিক্ষাও 🥺";
 }
 
 async function teachBot(question, answer) {
