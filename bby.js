@@ -46,14 +46,14 @@ async function teachBot(question, answer) {
 app.post("/chat", async (req, res) => {
     const { message } = req.body;
 
-    if (message.toLowerCase().startsWith("teach:")) {
-        const parts = message.replace("teach:", "").split("=");
+    if (message.toLowerCase().startsWith("bby teach:")) {
+        const parts = message.replace("bby teach:", "").split("=");
         if (parts.length === 2) {
             const [q, a] = parts;
             await teachBot(q.trim(), a.trim());
-            return res.json({ reply: "🤖 GoatBot: Ami shikhte parlam!" });
+            return res.json({ reply: "𝐍𝐈𝐑𝐎𝐁 𝐁𝐎𝐓: teach successful !" });
         } else {
-            return res.json({ reply: "Teach format: teach: prosno = uttor" });
+            return res.json({ reply: "Teach format: bby teach: kemon acho = valo achi tumi" });
         }
     } else {
         return res.json({ reply: botReply(message) });
